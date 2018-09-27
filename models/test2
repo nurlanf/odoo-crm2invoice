@@ -1,0 +1,1 @@
+context="{'form_view_ref':'account.invoice_form', 'default_type':'out_invoice','type':'out_invoice', 'journal_type': 'sale', 'search_default_partner_id': partner_id,                                   'default_partner_id': partner_id, 'default_team_id': team_id, 'default_campaign_id': campaign_id, 'default_medium_id': medium_id, 'default_source_id': source_id}"
