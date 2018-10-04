@@ -1,28 +1,35 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-# Module name: CRM2Invoice for Odoo 11
-# Required modules: Invoicing,CRM
-# Authour: nurlanf@github
-##############################################################################
-
 {
-    'name': 'crm2invoice',
-    'version': '11.0.1.0.0',
-    'summary': """CRM 2 Invoice addition""",
-    'description': """CRM2Invoice""",
-    'author': 'erpgo.az',
-    'company': 'erpgo.az',
-    'website': 'https://www.erpgo.az',
-    'category': 'Industries',
-    'depends': ['base', 'crm', 'account'],
-    'license': 'AGPL-3',
-    'data': [
-	'views/crm2invoice.xml',
-    ],
-    'demo': [],
-    'images': [''],
-    'installable': True,
-    'application': True,
-    'auto_install': False,
-}
+    'name': "crm2invoice",
 
+    'summary': """
+        Short (1 phrase/line) summary of the module's purpose, used as
+        subtitle on modules listing or apps.openerp.com""",
+
+    'description': """
+        Long description of module's purpose
+    """,
+
+    'author': "My Company",
+    'website': "http://www.yourcompany.com",
+
+    # Categories can be used to filter modules in modules listing
+    # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
+    # for the full list
+    'category': 'Uncategorized',
+    'version': '0.1',
+
+    # any module necessary for this one to work correctly
+    'depends': ['base'],
+
+    # always loaded
+    'data': [
+        # 'security/ir.model.access.csv',
+        'views/views.xml',
+        'views/templates.xml',
+    ],
+    # only loaded in demonstration mode
+    'demo': [
+        'demo/demo.xml',
+    ],
+}
