@@ -1,6 +1,5 @@
 <odoo>
     <data>
-
         <!-- relational field on ir.model.fields -->
         <!--record id="crm-relational-field-on-invoice" model="ir.model.fields">
             <field name="name">crm_field<field/>
@@ -43,11 +42,9 @@
             <field name="type">form</field>
             <field name="active" eval="True"/>
             <field name="arch" type="xml">
-                <data>
                     <xpath expr="//field[@name='partner_id']" position="before">
                         <field name="crm_lead" attrs="{}" readonly="1"/>
                     </xpath>
-                </data>
             </field>
         </record>
 
