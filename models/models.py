@@ -13,3 +13,8 @@ from odoo import models, fields, api
 #     @api.depends('value')
 #     def _value_pc(self):
 #         self.value2 = float(self.value) / 100
+
+class Account(models.Model):
+    _inherit = 'account.invoice'
+
+    crm_lead = fields.Many2one('account.invoice', string="Lead/Opportunity", readonly="True")
