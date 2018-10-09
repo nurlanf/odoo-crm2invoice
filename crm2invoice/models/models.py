@@ -25,9 +25,10 @@ class CRM(models.Model):
     x_crm_lead__account_invoice_count = fields.Integer()
 
     @api.multi
+    def _invoice_count(self):
     results = self.env['account.invoice'].read_group([('crm_lead', 'in', self.ids)], 'crm_lead', 'crm_lead')
     dic = {}
-    for x in results: dic[x['crm_lead'][0]] = x['crm_lead_count']
-    def _invoice_count(self):
+    for x in results:
+        dic[x['crm_lead'][0]] = x['crm_lead_count']
     for record in self:
         record['x_crm_lead__account_invoice_count'] = dic.get(record.id, 0)
