@@ -50,7 +50,6 @@
                 </data>
             </field>
         </record>
-    </data>
 
     <record id="crm.smart_invoices_button"
             model="ir.ui.view">
@@ -69,6 +68,7 @@
             </xpath>
         </data>
     </record>
+
     <record model="ir.actions.act_window" id="crm_invoice_smart_action">
         <field name="name">Invoices</field>
         <field name="res_model">account.invoice</field>
