@@ -22,7 +22,7 @@ class Account(models.Model):
 class CRM(models.Model):
     _inherit = 'crm.lead'
 
-    x_crm_lead__account_invoice_count = fields.Integer(compute ='_invoice_count(')
+    x_crm_lead__account_invoice_count = fields.Integer()
 
     @api.multi
     results = self.env['account.invoice'].read_group([('crm_lead', 'in', self.ids)], 'crm_lead', 'crm_lead')
