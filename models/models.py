@@ -17,4 +17,4 @@ from odoo import models, fields, api
 class Account(models.Model):
     _inherit = 'account.invoice'
 
-    crm_lead = fields.Many2one('account.invoice', string="Lead/Opportunity", readonly="True")
+    crm_lead = fields.Many2one('crm.lead', string="Lead/Opportunity", readonly="True")
