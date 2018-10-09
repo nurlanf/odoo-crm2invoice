@@ -57,13 +57,11 @@
             <field name="type">form</field>
             <field name="active" eval="True"/>
             <field name="arch" type="xml"/>
-            <data>
                 <xpath expr="//button[@name='toggle_active']" position="after">
                     <button class="oe_stat_button" icon="fa-diamond" type="action" name="crm_invoice_smart_action">
                         <field name="x_crm_lead__account_invoice_count" string="Invoices" widget="statinfo"/>
                     </button>
                 </xpath>
-            </data>
         </record>
 
         <record model="ir.actions.act_window" id="crm_invoice_smart_action">
