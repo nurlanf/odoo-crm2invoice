@@ -48,7 +48,7 @@
             </field>
         </record>
 
-        <!--record id="crm.smart_invoices_button"
+        <record id="crm.smart_invoices_button"
                 model="ir.ui.view">
             <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
             <field name="mode">extension</field>
@@ -62,7 +62,7 @@
                         <field name="x_crm_lead__account_invoice_count" string="Invoices" widget="statinfo"/>
                     </button>
                 </xpath>
-        </record-->
+        </record>
 
         <record model="ir.actions.act_window" id="crm_invoice_smart_action">
             <field name="name">Invoices</field>
