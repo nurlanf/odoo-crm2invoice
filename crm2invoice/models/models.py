@@ -24,7 +24,7 @@ class Account(models.Model):
 class CRM(models.Model):
     _inherit = 'crm.lead'
 
-    x_crm_lead__account_invoice_count = fields.Integer()
+    x_crm_lead__account_invoice_count = fields.Integer(compute='_invoice_count')
 
     @api.multi
     def _invoice_count( self):
