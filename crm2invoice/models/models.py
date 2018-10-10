@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api
 
+
 # class testmodule(models.Model):
 #     _name = 'testmodule.testmodule'
 
@@ -19,6 +20,7 @@ class Account(models.Model):
 
     crm_lead = fields.Many2one('crm.lead', string="Lead/Opportunity", readonly="True")
 
+
 class CRM(models.Model):
     _inherit = 'crm.lead'
 
@@ -26,7 +28,8 @@ class CRM(models.Model):
 
     @api.multi
     def _invoice_count(self):
-    results = self.env['account.invoice'].read_group([('crm_lead', 'in', self.ids)], 'crm_lead', 'crm_lead')
+
+        results = self.env['account.invoice'].read_group([('crm_lead', 'in', self.ids)], 'crm_lead', 'crm_lead')
     dic = {}
     for x in results:
         dic[x['crm_lead'][0]] = x['crm_lead_count']
