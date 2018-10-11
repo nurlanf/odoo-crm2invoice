@@ -72,7 +72,5 @@
             <field name="domain">[('crm_lead', '=', active_id)]</field>
             <field name="context">{'search_default_crm_lead': active_id,'default_crm_lead': active_id}</field>
         </record>
-        <menuitem id="custom_invoice_button" name="Invoices" parent="crm.res_partner_menu_crm" action="crm_invoice_smart_action"/>
-
     </data>
 </odoo>
