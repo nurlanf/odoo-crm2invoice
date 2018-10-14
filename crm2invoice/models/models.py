@@ -18,6 +18,7 @@ from odoo import models, fields, api
 class CRM(models.Model):
     _inherit = 'crm.lead'
 
+    x_crm_lead_test_field = fields.Char(String="Test field")
     x_crm_lead__account_invoice_count = fields.Integer(compute='_invoice_count')
 
     @api.multi
@@ -30,8 +31,4 @@ class CRM(models.Model):
             record['x_crm_lead__account_invoice_count'] = dic.get(record.id, 0)
 
 
-class CRM(models.Model):
-    _inherit = 'crm.lead'
-
-    x_crm_lead_test_field = fields.Char(String="Test field")
 
