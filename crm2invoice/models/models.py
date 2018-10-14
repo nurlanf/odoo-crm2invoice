@@ -13,13 +13,7 @@ from odoo import models, fields, api
 #
 #     @api.depends('value')
 #     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
-
-class Account(models.Model):
-    _inherit = 'account.invoice'
-
-    crm_lead = fields.Many2one('crm.lead', string="Lead/Opportunity", readonly="True")
-
+#         self.value2 = float(self.value) / 10
 
 class CRM(models.Model):
     _inherit = 'crm.lead'
@@ -34,3 +28,10 @@ class CRM(models.Model):
             dic[x['crm_lead'][0]] = x['crm_lead_count']
         for record in self:
             record['x_crm_lead__account_invoice_count'] = dic.get(record.id, 0)
+
+
+class CRM(models.Model):
+    _inherit = 'crm.lead'
+
+    x_crm_lead_test_field = fields.Char(String="Test field")
+
