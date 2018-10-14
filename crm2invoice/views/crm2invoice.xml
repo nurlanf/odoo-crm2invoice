@@ -72,6 +72,5 @@
             <field name="domain">[('crm_lead', '=', active_id)]</field>
             <field name="context">{'search_default_crm_lead': active_id,'default_crm_lead': active_id}</field>
         </record>
-
     </data>
 </odoo>
