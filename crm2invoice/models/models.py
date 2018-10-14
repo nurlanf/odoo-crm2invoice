@@ -19,8 +19,8 @@ class Invoice(models.Model):
     _inherit = 'account.invoice'
 
     crm_lead = fields.Many2one('account.invoice'
-    string = "Lead/Opportunity"
-    readonly = "True")
+    string="Lead/Opportunity"
+    readonly=True)
 
     class CRM(models.Model):
         _inherit = 'crm.lead'
