@@ -18,21 +18,20 @@ from odoo import models, fields, api
 class Invoice(models.Model)
     _inherit = 'account.invoice'
 
-    crm_lead = fields.Many2one('account.invoice' string="Lead/Opportunity" readonly="True")
+    crm_lead = fields.Many2one('account.invoice'
+    string = "Lead/Opportunity"
+    readonly = "True")
 
-class CRM(models.Model):
-    _inherit = 'crm.lead'
+    class CRM(models.Model):
+        _inherit = 'crm.lead'
 
-    x_crm_lead__account_invoice_count = fields.Integer(compute='_invoice_count')
+        x_crm_lead__account_invoice_count = fields.Integer(compute='_invoice_count')
 
-    @api.multi
-    def _invoice_count( self ):
-        results = self.env['account.invoice'].read_group([('crm_lead', 'in', self.ids)], 'crm_lead', 'crm_lead')
-        dic = {}
-        for x in results:
-            dic[x['crm_lead'][0]] = x['crm_lead_count']
-        for record in self:
-            record['x_crm_lead__account_invoice_count'] = dic.get(record.id, 0)
-
-
-
+        @api.multi
+        def _invoice_count( self ):
+            results = self.env['account.invoice'].read_group([('crm_lead', 'in', self.ids)], 'crm_lead', 'crm_lead')
+            dic = {}
+            for x in results:
+                dic[x['crm_lead'][0]] = x['crm_lead_count']
+            for record in self:
+                record['x_crm_lead__account_invoice_count'] = dic.get(record.id, 0)
