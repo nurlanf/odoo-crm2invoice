@@ -15,7 +15,7 @@ from odoo import models, fields, api
 #     def _value_pc(self):
 #         self.value2 = float(self.value) / 10
 
-class Invoice(models.Model)
+class Invoice(models.Model):
     _inherit = 'account.invoice'
 
     crm_lead = fields.Many2one('account.invoice'
