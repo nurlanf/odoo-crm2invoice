@@ -31,11 +31,11 @@
             <field name="active" eval="True"/>
             <field name="filter_domain">["&amp;",["stage_id","!=",1]]</field>
             <field name="filter_pre_domain">["|",["stage_id","=",1]]</field>
-            <field name="last_run" eval="False"/>
+            <!--field name="last_run" eval="False"/>
             <field name="on_change_fields" eval="False"/>
             <field name="trg_date_id" eval="False"/>
             <field name="trg_date_range" eval="False"/>
-            <field name="trg_date_range_type" eval="False"/>
+            <field name="trg_date_range_type" eval="False"/-->
             <field name="trigger">on_create_or_write</field>
         </record>
 
