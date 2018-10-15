@@ -24,6 +24,7 @@
             <field name="state">code</field>
         </record>
 
+
         <record id="crm2invoice.automation_no_invoice_raise_warning"
                 model="base.automation" context="{'studio': True}">
             <field name="action_server_id"
