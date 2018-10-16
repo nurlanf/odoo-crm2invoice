@@ -30,8 +30,8 @@
             <field name="action_server_id"
                    ref="crm2invoice.action_no_invoice_raise_warning"/>
             <field name="active" eval="True"/>
-            <field name="filter_domain">[["object_ids"], "&amp;",["stage_id","!=",1]]</field>
-            <field name="filter_pre_domain">[["object_ids"], "|",["stage_id","=",1]]</field>
+            <field name="filter_domain">[["stage_id","!=",1]]</field>
+            <field name="filter_pre_domain">[["stage_id","=",1]]</field>
             <field name="last_run" eval="False"/>
             <field name="on_change_fields" eval="False"/>
             <field name="trg_date_id" eval="False"/>
