@@ -26,17 +26,17 @@
 
 
         <record id="crm2invoice.automation_no_invoice_raise_warning"
-                model="base.automation" context="{'studio': True}">
+                model="base.automation">
             <field name="action_server_id"
                    ref="crm2invoice.action_no_invoice_raise_warning"/>
             <field name="active" eval="True"/>
             <field name="filter_domain">["&amp;",["stage_id","!=",1]]</field>
             <field name="filter_pre_domain">["|",["stage_id","=",1]]</field>
-            <!--field name="last_run" eval="False"/>
+            <field name="last_run" eval="False"/>
             <field name="on_change_fields" eval="False"/>
             <field name="trg_date_id" eval="False"/>
             <field name="trg_date_range" eval="False"/>
-            <field name="trg_date_range_type" eval="False"/-->
+            <field name="trg_date_range_type" eval="False"/>
             <field name="trigger">on_create_or_write</field>
         </record>
 
