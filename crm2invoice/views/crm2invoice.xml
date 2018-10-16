@@ -94,7 +94,7 @@
         </record>
 
         <!--"NEW INVOICE" button as "NEW QUOTATION" -->
-        <record model="ir.actions.act_window" id="crm_invoice_new_invoice_button_action">
+        <record model="ir.actions.act_window" id="crm2invoice.crm_invoice_new_invoice_button_action">
             <field name="name">New Invoice</field>
             <field name="res_model">account.invoice</field>
             <field name="view_mode">form</field>
