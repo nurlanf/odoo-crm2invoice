@@ -26,6 +26,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/crm2invoice.xml',
+        'views/automation.xml',
         #'views/templates.xml',
     ],
     # only loaded in demonstration mode
