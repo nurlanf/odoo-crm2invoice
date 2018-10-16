@@ -98,6 +98,7 @@
             <field name="name">New Invoice</field>
             <field name="res_model">account.invoice</field>
             <field name="view_mode">form</field>
+            <field name="target">new</field>
             <field name="domain">[('crm_lead', '=', active_id)]</field>
             <field name="context">{'search_default_crm_lead': active_id,'default_crm_lead': active_id}</field>
         </record>
