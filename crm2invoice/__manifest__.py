@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','crm','account_invoicing'],
+    'depends': ['base', 'base_automation', 'crm', 'account_invoicing'],
 
     # always loaded
     'data': [
@@ -34,5 +34,5 @@
         'demo/demo.xml',
     ],
     'installable': True,
-    'Application': True,
+    'application': True,
 }
