@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'base_automation', 'crm', 'account_invoicing'],
+    'depends': ['base', 'base_automation', 'l10n_uk', 'crm', 'account_invoicing'],
 
     # always loaded
     'data': [
